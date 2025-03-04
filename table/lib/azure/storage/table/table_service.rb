@@ -24,6 +24,7 @@
 # THE SOFTWARE.
 #--------------------------------------------------------------------------
 require "azure/storage/table/auth/shared_key"
+require "cgi"
 
 module Azure::Storage
   include Azure::Storage::Common::Service
@@ -741,14 +742,7 @@ module Azure::Storage
 
       protected
         def encodeODataUriValue(value)
-          # Replace each single quote (') with double single quotes ('') not double
-          # quotes (")
-          value = value.gsub("'", "''")
-
-          # Encode the special URL characters
-          value = URI.encode_www_form_component(value)
-
-          value
+          CGI.escape(value)
         end
 
       protected

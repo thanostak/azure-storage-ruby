@@ -31,6 +31,7 @@ require "openssl"
 require "uri"
 require "faraday"
 require 'faraday/follow_redirects'
+require "faraday/net_http_persistent"
 require "azure/storage/common/core/autoload"
 require "azure/storage/common/default"
 

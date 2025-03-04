@@ -38,9 +38,9 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
   s.files       = `git ls-files ./lib/azure/storage/blob/`.split("\n") << "./lib/azure/storage/blob.rb"
 
-  s.required_ruby_version = ">= 2.3.0"
+  s.required_ruby_version = ">= 3.1.0"
 
-  s.add_runtime_dependency("azure-storage-common",    "~> 2.0", ">= 2.0.5")
+  s.add_runtime_dependency("azure-storage-common")
   s.add_runtime_dependency("nokogiri",                "~> 1.18", ">= 1.18.3")
   s.add_development_dependency("dotenv",              "~> 2.0")
   s.add_development_dependency("minitest",            "~> 5")
