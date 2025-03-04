@@ -25,6 +25,10 @@
 #--------------------------------------------------------------------------
 source "https://rubygems.org"
 
-gemspec name: "azure-storage-blob"
+gemspec
+
+gem "azure-storage-common", 
+    git: "https://github.com/thanostak/azure-storage-ruby.git",
+    glob: "common/*.gemspec"
 
 gem "coveralls", require: false

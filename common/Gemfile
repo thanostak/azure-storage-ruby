@@ -27,6 +27,4 @@ source "https://rubygems.org"
 
 gem 'azure-storage-common', path: '../common'
 
-gemspec name: "azure-storage-common"
-
 gem "coveralls", require: false
